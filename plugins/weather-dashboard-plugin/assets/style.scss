@@ -1,0 +1,79 @@
+
+.weather-dashboard-container {
+    background-image: url(./Photos/weather-image.jpg);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+
+    h1 {
+        font-size: 55px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: white;
+        position: relative;
+    }
+
+    h1::after {
+        content: "\2601";
+        padding-left: 30px;
+        font-size: 70px;
+        display: inline-block;
+        line-height: 1;
+        position: absolute;
+        top: 50%;
+        left: 80%;
+        transform: translate(80%, -50%);
+        transition: all 0.7s ease;
+    }
+
+    h1:hover::after {
+        transform: translate(-20%, -50%);
+        left: 100%;
+    }
+
+
+
+    .country-list {
+        height: 30px;
+        border-radius: 3px;
+    }
+
+    select:focus {
+        outline: none;
+        border: none;
+    }
+
+    .weather-tile {
+        font-size: 35px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: white;
+    }
+
+    .temperature::before {
+        content: "\1F321"; 
+        color: white;
+        font-size: 40px;
+    }
+
+    .wind::before {
+        content: "\2634";
+        color: white;
+        padding-right: 8px;
+    }
+    
+    .humidity::before {
+        content: "\1F322";
+        color: white;
+        padding-right: 5px;
+    }
+
+    .pressure::before {
+        content: "\3371";
+        padding-right: 5px;
+    }
+}
+
+
+

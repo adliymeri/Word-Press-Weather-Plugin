@@ -1,0 +1,66 @@
+@charset "UTF-8";
+.weather-dashboard-container {
+  background-image: url(./Photos/weather-image.jpg);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+.weather-dashboard-container h1 {
+  font-size: 55px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+  position: relative;
+}
+.weather-dashboard-container h1::after {
+  content: "☁";
+  padding-left: 30px;
+  font-size: 70px;
+  display: inline-block;
+  line-height: 1;
+  position: absolute;
+  top: 50%;
+  left: 80%;
+  transform: translate(80%, -50%);
+  transition: all 0.7s ease;
+}
+.weather-dashboard-container h1:hover::after {
+  transform: translate(-20%, -50%);
+  left: 100%;
+}
+.weather-dashboard-container .country-list {
+  height: 30px;
+  border-radius: 3px;
+}
+.weather-dashboard-container select:focus {
+  outline: none;
+  border: none;
+}
+.weather-dashboard-container .weather-tile {
+  font-size: 35px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+}
+.weather-dashboard-container .temperature::before {
+  content: "🌡";
+  color: white;
+  font-size: 40px;
+}
+.weather-dashboard-container .wind::before {
+  content: "☴";
+  color: white;
+  padding-right: 8px;
+}
+.weather-dashboard-container .humidity::before {
+  content: "🌢";
+  color: white;
+  padding-right: 5px;
+}
+.weather-dashboard-container .pressure::before {
+  content: "㍱";
+  padding-right: 5px;
+}
+
+/*# sourceMappingURL=style.css.map */
